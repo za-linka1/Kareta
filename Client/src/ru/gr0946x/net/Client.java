@@ -1,14 +1,10 @@
 package ru.gr0946x.net;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiConsumer;
-import java.util.function.Consumer;
 
 public class Client {
     private Communicator communicator;
@@ -22,10 +18,6 @@ public class Client {
 
     public void addDataListener(BiConsumer<String, MessageType> listener){
         listeners.add(listener);
-    }
-
-    public void removeDataListener(BiConsumer<String, MessageType> listener){
-        listeners.remove(listener);
     }
 
     public void start(){
@@ -46,7 +38,9 @@ public class Client {
     public void sendData(String data){
         communicator.sendData(data);
     }
-
+    public boolean isConnected() {
+        return communicator != null && communicator.isActive();
+    }
     public void stop(){
         communicator.stop();
     }

@@ -47,11 +47,12 @@ public class Communicator {
 
     public void sendData(String data){
         try {
-            var pw = new PrintWriter(socket.getOutputStream());
+            System.out.println("Communicator.sendData: " + data); // ОТЛАДКА
+            var pw = new PrintWriter(socket.getOutputStream(), true); // autoFlush = true
             pw.println(data);
-            pw.flush();
         } catch (Exception e) {
-            System.out.println("Ошибка отправки данных");
+            System.out.println("Ошибка отправки данных: " + e.getMessage());
+            e.printStackTrace(); // Покажем полную ошибку
             stop();
         }
     }
@@ -60,7 +61,10 @@ public class Communicator {
         isActive = false;
         try {
             socket.close();
-        } catch (IOException _) {
+        } catch (IOException e) {
         }
+    }
+    public boolean isActive() {
+        return isActive;
     }
 }
