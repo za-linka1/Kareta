@@ -1,14 +1,11 @@
-package ru.gr0946x.net.serv;
-import ru.gr0946x.net.Communicator;
-import ru.gr0946x.net.MessageType;
-import ru.gr0946x.net.entity.User;
-import ru.gr0946x.net.entity.Message;
-import ru.gr0946x.net.repository.UserRepository;
-import ru.gr0946x.net.repository.MessageRepository;
+package ru.gr0946x.net;
+import ru.gr0946x.db.entity.User;
+import ru.gr0946x.db.entity.Message;
+import ru.gr0946x.db.repository.UserRepository;
+import ru.gr0946x.db.repository.MessageRepository;
 import org.springframework.context.ApplicationContext;
 import org.springframework.data.domain.PageRequest;
 
-import java.awt.*;
 import java.net.Socket;
 import java.util.List;
 import java.util.Timer;

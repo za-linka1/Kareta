@@ -1,6 +1,6 @@
-package ru.gr0946x.net.repository;
+package ru.gr0946x.db.repository;
 
-import ru.gr0946x.net.entity.User;
+import ru.gr0946x.db.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 

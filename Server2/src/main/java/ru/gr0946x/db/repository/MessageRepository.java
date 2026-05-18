@@ -1,6 +1,6 @@
-package ru.gr0946x.net.repository;
+package ru.gr0946x.db.repository;
 
-import ru.gr0946x.net.entity.Message;
+import ru.gr0946x.db.entity.Message;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

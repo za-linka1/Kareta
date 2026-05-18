@@ -1,4 +1,4 @@
-package ru.gr0946x.net.serv;
+package ru.gr0946x.net;
 import org.springframework.context.ApplicationContext;
 
 import java.io.IOException;

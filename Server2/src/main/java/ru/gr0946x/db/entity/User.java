@@ -1,4 +1,4 @@
-package ru.gr0946x.net.entity;
+package ru.gr0946x.db.entity;
 
 
 import jakarta.persistence.*;
